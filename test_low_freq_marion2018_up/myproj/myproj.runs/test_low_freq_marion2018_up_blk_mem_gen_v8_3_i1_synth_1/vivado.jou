@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Thu Mar 29 05:52:59 2018
+# Process ID: 6823
+# Current directory: /home/philip/firmware_marion2018/test_low_freq_marion2018_up/myproj/myproj.runs/test_low_freq_marion2018_up_blk_mem_gen_v8_3_i1_synth_1
+# Command line: vivado -log test_low_freq_marion2018_up_blk_mem_gen_v8_3_i1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_low_freq_marion2018_up_blk_mem_gen_v8_3_i1.tcl
+# Log file: /home/philip/firmware_marion2018/test_low_freq_marion2018_up/myproj/myproj.runs/test_low_freq_marion2018_up_blk_mem_gen_v8_3_i1_synth_1/test_low_freq_marion2018_up_blk_mem_gen_v8_3_i1.vds
+# Journal file: /home/philip/firmware_marion2018/test_low_freq_marion2018_up/myproj/myproj.runs/test_low_freq_marion2018_up_blk_mem_gen_v8_3_i1_synth_1/vivado.jou
+#-----------------------------------------------------------
+source test_low_freq_marion2018_up_blk_mem_gen_v8_3_i1.tcl -notrace

@@ -2,3 +2,14 @@ export XILINX_PATH=/opt/Xilinx/Vivado/2016.4
 export MATLAB_PATH=/usr/local/MATLAB/R2016b
 export PLATFORM=lin64
 export JASPER_BACKEND=vivado
+###
+export MLIB_DEVEL_PATH=/home/philip/firmware_marion2018/mlib_devel
+export PLATFORM=lin64
+export XILINXD_LICENSE_FILE=/home/jackh/.Xilinx/Xilinx.lic
+
+export SYSGEN_SCRIPT=$MLIB_DEVEL_PATH/startsg
+export MATLAB=$MATLAB_PATH
+export CASPER_BASE_PATH=$MLIB_DEVEL_PATH
+export HDL_ROOT=$CASPER_BASE_PATH/jasper_library/hdl_sources
+export XPS_BASE_PATH=$MLIB_DEVEL_PATH/xps_base
+source $XILINX_PATH/settings64.sh

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Thu Mar 29 05:15:58 2018
+# Process ID: 21124
+# Current directory: /home/philip/firmware_marion2018
+# Command line: vivado -jou /home/philip/firmware_marion2018/test_low_freq_marion2018_up/vivado.jou -log /home/philip/firmware_marion2018/test_low_freq_marion2018_up/vivado.log -mode batch -source /home/philip/firmware_marion2018/test_low_freq_marion2018_up/gogogo.tcl
+# Log file: /home/philip/firmware_marion2018/test_low_freq_marion2018_up/vivado.log
+# Journal file: /home/philip/firmware_marion2018/test_low_freq_marion2018_up/vivado.jou
+#-----------------------------------------------------------
+source /home/philip/firmware_marion2018/test_low_freq_marion2018_up/gogogo.tcl

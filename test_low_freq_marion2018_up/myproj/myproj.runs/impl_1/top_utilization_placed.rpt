@@ -1,0 +1,301 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (lin64) Build 1733598 Wed Dec 14 22:35:42 MST 2016
+| Date         : Thu Mar 29 06:08:41 2018
+| Host         : acme1 running 64-bit Ubuntu 16.04.2 LTS
+| Command      : report_utilization -file top_utilization_placed.rpt -pb top_utilization_placed.pb
+| Design       : top
+| Device       : 7k160tffg676-2
+| Design State : Fully Placed
+---------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Slice Logic Distribution
+3. Memory
+4. DSP
+5. IO and GT Specific
+6. Clocking
+7. Specific Feature
+8. Primitives
+9. Black Boxes
+10. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++----------------------------+-------+-------+-----------+-------+
+|          Site Type         |  Used | Fixed | Available | Util% |
++----------------------------+-------+-------+-----------+-------+
+| Slice LUTs                 |  9067 |     0 |    101400 |  8.94 |
+|   LUT as Logic             |  7773 |     0 |    101400 |  7.67 |
+|   LUT as Memory            |  1294 |     0 |     35000 |  3.70 |
+|     LUT as Distributed RAM |   162 |     0 |           |       |
+|     LUT as Shift Register  |  1132 |     0 |           |       |
+| Slice Registers            | 19850 |     0 |    202800 |  9.79 |
+|   Register as Flip Flop    | 19850 |     0 |    202800 |  9.79 |
+|   Register as Latch        |     0 |     0 |    202800 |  0.00 |
+| F7 Muxes                   |    96 |     0 |     50700 |  0.19 |
+| F8 Muxes                   |     0 |     0 |     25350 |  0.00 |
++----------------------------+-------+-------+-----------+-------+
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 12    |          Yes |           - |          Set |
+| 1178  |          Yes |           - |        Reset |
+| 903   |          Yes |         Set |            - |
+| 17759 |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Slice Logic Distribution
+---------------------------
+
++-------------------------------------------+------+-------+-----------+-------+
+|                 Site Type                 | Used | Fixed | Available | Util% |
++-------------------------------------------+------+-------+-----------+-------+
+| Slice                                     | 5097 |     0 |     25350 | 20.11 |
+|   SLICEL                                  | 3245 |     0 |           |       |
+|   SLICEM                                  | 1852 |     0 |           |       |
+| LUT as Logic                              | 7773 |     0 |    101400 |  7.67 |
+|   using O5 output only                    |   77 |       |           |       |
+|   using O6 output only                    | 5610 |       |           |       |
+|   using O5 and O6                         | 2086 |       |           |       |
+| LUT as Memory                             | 1294 |     0 |     35000 |  3.70 |
+|   LUT as Distributed RAM                  |  162 |     0 |           |       |
+|     using O5 output only                  |    0 |       |           |       |
+|     using O6 output only                  |    0 |       |           |       |
+|     using O5 and O6                       |  162 |       |           |       |
+|   LUT as Shift Register                   | 1132 |     0 |           |       |
+|     using O5 output only                  |   50 |       |           |       |
+|     using O6 output only                  |  349 |       |           |       |
+|     using O5 and O6                       |  733 |       |           |       |
+| LUT Flip Flop Pairs                       | 6812 |     0 |    101400 |  6.72 |
+|   fully used LUT-FF pairs                 | 2235 |       |           |       |
+|   LUT-FF pairs with one unused LUT output | 4324 |       |           |       |
+|   LUT-FF pairs with one unused Flip Flop  | 3938 |       |           |       |
+| Unique Control Sets                       |  242 |       |           |       |
++-------------------------------------------+------+-------+-----------+-------+
+* Note: Review the Control Sets Report for more information regarding control sets.
+
+
+3. Memory
+---------
+
++-------------------+------+-------+-----------+-------+
+|     Site Type     | Used | Fixed | Available | Util% |
++-------------------+------+-------+-----------+-------+
+| Block RAM Tile    | 86.5 |     0 |       325 | 26.62 |
+|   RAMB36/FIFO*    |   67 |     0 |       325 | 20.62 |
+|     RAMB36E1 only |   67 |       |           |       |
+|   RAMB18          |   39 |     0 |       650 |  6.00 |
+|     RAMB18E1 only |   39 |       |           |       |
++-------------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+4. DSP
+------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |   76 |     0 |       600 | 12.67 |
+|   DSP48E1 only |   76 |       |           |       |
++----------------+------+-------+-----------+-------+
+
+
+5. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |   81 |    81 |       400 | 20.25 |
+|   IOB Master Pads           |   41 |       |           |       |
+|   IOB Slave Pads            |   40 |       |           |       |
+|   IOB Flip Flops            |    2 |     2 |           |       |
+| Bonded IPADs                |    0 |     0 |        26 |  0.00 |
+| Bonded OPADs                |    0 |     0 |        16 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |         8 |  0.00 |
+| PHASER_REF                  |    0 |     0 |         8 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        32 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        32 |  0.00 |
+| IDELAYCTRL                  |    3 |     0 |         8 | 37.50 |
+| IBUFDS                      |   26 |    26 |       384 |  6.77 |
+| GTXE2_COMMON                |    0 |     0 |         2 |  0.00 |
+| GTXE2_CHANNEL               |    0 |     0 |         8 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        32 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        32 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |   24 |    24 |       400 |  6.00 |
+|   IDELAYE2 only             |   24 |    24 |           |       |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |       150 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |         4 |  0.00 |
+| ILOGIC                      |   24 |    24 |       400 |  6.00 |
+|   ISERDES                   |   24 |    24 |           |       |
+| OLOGIC                      |    2 |     2 |       400 |  0.50 |
+|   OUTFF_Register            |    2 |     2 |           |       |
++-----------------------------+------+-------+-----------+-------+
+
+
+6. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    4 |     0 |        32 | 12.50 |
+| BUFIO      |    0 |     0 |        32 |  0.00 |
+| MMCME2_ADV |    2 |     0 |         8 | 25.00 |
+| PLLE2_ADV  |    0 |     0 |         8 |  0.00 |
+| BUFMRCE    |    0 |     0 |        16 |  0.00 |
+| BUFHCE     |    0 |     0 |       120 |  0.00 |
+| BUFR       |    0 |     0 |        32 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+7. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+--------+
+|  Site Type  | Used | Fixed | Available |  Util% |
++-------------+------+-------+-----------+--------+
+| BSCANE2     |    0 |     0 |         4 |   0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |   0.00 |
+| DNA_PORT    |    0 |     0 |         1 |   0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |   0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |   0.00 |
+| ICAPE2      |    0 |     0 |         2 |   0.00 |
+| PCIE_2_1    |    0 |     0 |         1 |   0.00 |
+| STARTUPE2   |    0 |     0 |         1 |   0.00 |
+| XADC        |    1 |     0 |         1 | 100.00 |
++-------------+------+-------+-----------+--------+
+
+
+8. Primitives
+-------------
+
++------------+-------+---------------------+
+|  Ref Name  |  Used | Functional Category |
++------------+-------+---------------------+
+| FDRE       | 17759 |        Flop & Latch |
+| LUT3       |  3464 |                 LUT |
+| LUT2       |  2154 |                 LUT |
+| CARRY4     |  2008 |          CarryLogic |
+| LUT5       |  2005 |                 LUT |
+| SRL16E     |  1711 |  Distributed Memory |
+| FDCE       |  1178 |        Flop & Latch |
+| LUT1       |   962 |                 LUT |
+| FDSE       |   903 |        Flop & Latch |
+| LUT4       |   760 |                 LUT |
+| LUT6       |   514 |                 LUT |
+| RAMD32     |   324 |  Distributed Memory |
+| SRLC32E    |   154 |  Distributed Memory |
+| MUXF7      |    96 |               MuxFx |
+| DSP48E1    |    76 |    Block Arithmetic |
+| RAMB36E1   |    67 |        Block Memory |
+| RAMB18E1   |    39 |        Block Memory |
+| IBUFDS     |    26 |                  IO |
+| OBUF       |    25 |                  IO |
+| ISERDESE2  |    24 |                  IO |
+| IDELAYE2   |    24 |                  IO |
+| FDPE       |    12 |        Flop & Latch |
+| IBUF       |     4 |                  IO |
+| BUFG       |     4 |               Clock |
+| IDELAYCTRL |     3 |                  IO |
+| MMCME2_ADV |     2 |               Clock |
+| XADC       |     1 |              Others |
++------------+-------+---------------------+
+
+
+9. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+10. Instantiated Netlists
+-------------------------
+
++--------------------------------------------------------+------+
+|                        Ref Name                        | Used |
++--------------------------------------------------------+------+
+| test_low_freq_marion2018_up_c_addsub_v12_0_i6          |   44 |
+| test_low_freq_marion2018_up_c_addsub_v12_0_i5          |   44 |
+| test_low_freq_marion2018_up_c_addsub_v12_0_i7          |   24 |
+| test_low_freq_marion2018_up_c_addsub_v12_0_i8          |   16 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i2  |    8 |
+| test_low_freq_marion2018_up_c_addsub_v12_0_i4          |    8 |
+| test_low_freq_marion2018_up_c_addsub_v12_0_i3          |    8 |
+| test_low_freq_marion2018_up_c_addsub_v12_0_i1          |    8 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i2        |    8 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i1  |    5 |
+| test_low_freq_marion2018_up_mult_gen_v12_0_i0          |    4 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i16 |    4 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i13 |    4 |
+| test_low_freq_marion2018_up_c_addsub_v12_0_i2          |    4 |
+| test_low_freq_marion2018_up_c_addsub_v12_0_i0          |    4 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i27       |    4 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i24       |    4 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i20       |    4 |
+| test_low_freq_marion2018_up_dist_mem_gen_v8_0_i3       |    3 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i3  |    3 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i0  |    3 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i4  |    2 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i15 |    2 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i9        |    2 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i8        |    2 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i7        |    2 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i6        |    2 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i26       |    2 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i25       |    2 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i23       |    2 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i22       |    2 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i13       |    2 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i11       |    2 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i0        |    2 |
+| xadc_wiz_0                                             |    1 |
+| test_low_freq_marion2018_up_dist_mem_gen_v8_0_i2       |    1 |
+| test_low_freq_marion2018_up_dist_mem_gen_v8_0_i1       |    1 |
+| test_low_freq_marion2018_up_dist_mem_gen_v8_0_i0       |    1 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i9  |    1 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i8  |    1 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i7  |    1 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i6  |    1 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i5  |    1 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i12 |    1 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i11 |    1 |
+| test_low_freq_marion2018_up_c_counter_binary_v12_0_i10 |    1 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i5        |    1 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i4        |    1 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i3        |    1 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i21       |    1 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i19       |    1 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i18       |    1 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i17       |    1 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i16       |    1 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i15       |    1 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i14       |    1 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i12       |    1 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i10       |    1 |
+| test_low_freq_marion2018_up_blk_mem_gen_v8_3_i1        |    1 |
++--------------------------------------------------------+------+
+
+
